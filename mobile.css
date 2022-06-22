@@ -1,0 +1,734 @@
+.mobile_container {
+    padding: 0 2rem;
+    background: #FAFAFA;
+    /* restrict to select text */
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */
+    -khtml-user-select: none;    /* Konqueror */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* Internet Explorer/Edge */
+    user-select: none;
+    -webkit-text-size-adjust: none;
+}
+
+.mobile_fixed-header {
+    padding: 1.5rem 0 2rem;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(#FAFAFA 0%, #FAFAFA 87%,transparent 100%);
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+.mobile_logo {
+    text-align: center;
+}
+
+.mobile_logo img {
+    width: 90%;
+}
+
+.mobile_contacts a {
+    text-decoration: none;
+}
+
+.mobile_contacts {
+    display: flex;
+    gap: 4%;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.mobile_contacts > a {
+    flex: 1;
+    font-size: 0;
+}
+
+.mobile_contacts > a > img {
+    width: 100%;
+    background: none;
+    box-shadow: 0px 3px 5px 0px #3F3F3F70;
+    border-radius: 21%;
+}
+
+#mobile_reset {
+    background: #ffffff;
+    border: none;
+    box-shadow: 0px 3px 5px 0px #3F3F3F55;
+    border-radius: 21%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 3%;
+    flex: 1;
+}
+
+#mobile_reset img {
+    width: 40%;
+    max-height: 100%;
+}
+
+.grey_text {
+    font-family: 'SF UI Display';
+    font-weight: 600;
+    font-size: 1.15rem;
+    color: #BBBBBB;
+}
+
+.mobile_modal .grey_text {
+    font-size: 0.95rem;
+    padding: 0.5rem 0;
+}
+
+#mobile_reset_btn {
+    color: #FF7061;
+    width: 11rem;
+}
+
+.mobile_fields_container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.15rem;
+}
+
+.mobile_custom-button{
+    width: 100%;
+    max-width: 100%;
+    background: rgba(181, 219, 255, 0.4);
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    padding: 0.8rem;
+    gap: 0.2rem;
+    border: none;
+    position: relative;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.mobile_custom-button::after {
+    content: '';
+    -webkit-mask-image: url('assets/images/arrow_right.svg');
+    mask-image: url('assets/images/arrow_right.svg');
+    -webkit-mask-size: 1rem 2rem;
+    mask-size: 1rem 2rem;
+    width: 1rem;
+    height: 2rem;
+    position: absolute;
+    right: 2rem;
+    top: 1rem;
+    pointer-events: none;
+    background: #0085FF;
+}
+
+.mobile_custom-button.focused::after {
+    background: none;
+    mask-image: none;
+    -webkit-mask-image: none;
+    background-image: url('assets/images/mobile_invalid.svg');
+    background-size: 1.5rem 1.5rem;
+    height: 1.5rem;
+    width: 1.5rem;
+    display: inline-block;
+    position: absolute;
+    right: 2rem;
+    top: 1.3rem;
+}
+
+.mobile_custom-button.focused {
+    background: #FFE9E9;
+    border: 0.1rem solid #FF7061CC;
+}
+
+.mobile_custom-button.focused .mobile_button-name {
+    color: #FF7061;
+}
+
+.mobile_custom-button.valid{
+    background: rgba(181, 219, 255, 0.4);
+    border: none;
+}
+
+.mobile_custom-button.valid .mobile_button-name {
+    color: #0085FF;
+    font-size: 0.9rem;
+    transform: translateY(-0.2rem);
+}
+
+.mobile_custom-button.valid .mobile_button-value {
+    font-size: 1.2rem;
+}
+
+.mobile_custom-button.valid::after {
+    background: none;
+    mask-image: none;
+    -webkit-mask-image: none;
+    background-image: url('assets/images/mobile_valid.svg');
+    background-size: 1.5rem 1.5rem;
+    height: 1.5rem;
+    width: 1.5rem;
+    display: inline-block;
+    position: absolute;
+    right: 2rem;
+    top: 1.3rem;
+}
+
+.mobile_button-name {
+    font-family: 'SF UI Display';
+    font-weight: 600;
+    color: #0085FF;
+    font-size: 1rem;
+    line-height: 1.1rem;
+}
+
+.mobile_ausstattung_field {
+    height: 4rem;
+    position: relative;
+}
+
+.mobile_aussttatung_button-name {
+    font-family: 'SF UI Display';
+    font-weight: 600;
+    font-size: 1rem;
+    color: #0085FF;
+    position: absolute;
+    top: 1.4rem;
+    left: 0.8rem;
+    transform-origin: 0 0;
+    transform: translate3d(0, 0, 0);
+    transition: font-size, transform 0.2s ease;
+    font-size: 1rem;
+    line-height: 1.1rem;
+}
+
+.mobile_ausstattung_field.filled .mobile_aussttatung_button-name{
+    transform: translate3d(0, -0.5rem, 0);
+}
+
+.mobile_ausstattung_field.filled::after {
+    transform: rotate(90deg);
+}
+
+.mobile_ausstattung_field.filled {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    height: 3rem;
+}
+
+.mobile_aussttatung_list {
+    display: none;
+    list-style: none;
+    gap: 1rem;
+    width: 100%;
+    overflow-x: scroll;
+    background: rgba(181, 219, 255, 0.4);
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    padding: 0 0.8rem 0.8rem;
+}
+
+.mobile_ausstattung_field.filled + .mobile_aussttatung_list {
+    display: flex;
+}
+
+.mobile_aussttatung_list li label {
+    white-space: nowrap;
+    font-family: 'SF UI Display';
+    font-weight: 400;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    color: #000000;
+    background: rgba(0, 133, 255, 0.3);
+    border-radius: 0.2rem;
+    padding: 0.2rem 0.5rem;
+    gap: 1rem;
+}
+
+.mobile_button-value {
+    font-family: 'SF UI Display';
+    font-weight: 300;
+    color: #BBBBBB;
+    font-size: 1rem;
+    line-height: 1.1rem;
+}
+
+.mobile_button-value.filled {
+    color: #000;
+}
+
+/* ------------------ MOBILE INPUT ----------------- */
+
+.mobile_custom-input {
+    position: relative;
+    margin: auto;
+    width: 100%;
+    overflow: hidden;
+}
+.mobile_custom-input .label {
+    position: absolute;
+    top: 0.8rem;
+    left: 0.8rem;
+    color: rgba(0, 0, 0, 0.5);
+    transform-origin: 0 0;
+    transform: translate3d(0, 0, 0);
+    transition: font-size, transform 0.2s ease;
+    font-size: 1rem;
+    line-height: 1.1rem;
+    font-family: 'SF UI Display';
+    font-weight: 600;
+    color: #0085FF;
+}
+
+.mobile_custom-input textarea:focus::placeholder {
+    color: transparent;
+}
+
+.mobile_custom-input input,
+.mobile_custom-input textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    border: 0;
+    padding: 1.5rem 0.8rem 0 0.8rem;
+    height: 4rem;
+    font-family: 'SF UI Display';
+    font-weight: 300;
+    background: rgba(181, 219, 255, 0.4);
+    color: #000;
+    transition: font-size 0.15s ease;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.mobile_custom-input textarea {
+    height: 12rem;
+    padding: 2rem 0.8rem 0 0.8rem;
+    resize: none;
+}
+
+.mobile_custom-input input::placeholder {
+    color: #BBBBBB;
+}
+
+.mobile_custom-input input:focus,
+.mobile_custom-input textarea:focus {
+    border: 0.1rem solid #0085FF;
+}
+
+.mobile_custom-input input:focus,
+.mobile_custom-input textarea:focus,
+.mobile_custom-input input:not(:placeholder-shown),
+.mobile_custom-input textarea:not(:placeholder-shown) {
+    background: rgba(181, 219, 255, 0.5);
+    font-size: 1.2rem;
+    outline: none;
+}
+.mobile_custom-input input:focus + .label,
+.mobile_custom-input textarea:focus + .label,
+.mobile_custom-input input:not(:placeholder-shown) + .label,
+.mobile_custom-input textarea:not(:placeholder-shown) + .label
+ {
+    color: #0077FF;
+    transform: translate3d(0, -0.2rem, 0) scale(0.8);
+}
+
+.mobile_validation-mark {
+    background-image: none;
+    background-size: 1.5rem 1.5rem;
+    height: 1.5rem;
+    width: 1.5rem;
+    display: inline-block;
+
+    position: absolute;
+    right: 2rem;
+    top: 1.3rem;
+}
+
+.mobile_custom-input input.focused:invalid {
+    background: #FFE9E9;
+    border: 0.1rem solid #FF7061CC;
+}
+
+.mobile_custom-input input.focused:invalid + .label {
+    color: #FF7061;
+}
+
+.mobile_custom-input input.focused:valid ~ .mobile_validation-mark,
+.mobile_custom-input textarea.focused:valid ~ .mobile_validation-mark {
+    background-image: url('assets/images/mobile_valid.svg');
+}
+
+.mobile_custom-input input.focused:invalid ~ .mobile_validation-mark {
+    background-image: url('assets/images/mobile_invalid.svg');
+}
+
+
+#mobile_files_field {
+    height: 12rem;
+    padding: 2rem 0.8rem 0 0.8rem;
+    position: relative;
+    background: rgba(181, 219, 255, 0.4);
+    border-radius: 0.5rem;
+    font-family: 'SF UI Display';
+    font-weight: 300;
+    font-size: 1rem;
+    color: #BBBBBB;
+}
+
+#mobile_files_field .files_valid {
+    color: #0085FF;
+}
+
+#mobile_file_button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 2rem;
+    height: 2rem;
+}
+
+#mobile_file_list {
+    overflow-x: clip;
+    overflow-y: scroll;
+    height: 9.5rem;
+}
+
+#mobile_file_list .mobile_file_list_name {
+    vertical-align: bottom;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#mobile_file_list .mobile_file_list_item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    color: #0085FF;
+    font-size: 1.1rem;
+    max-width: 80%;
+}
+
+.remove_file_btn svg {
+    width: 1rem;
+}
+
+
+/* ------------------ MOBILE INPUT END ----------------- */
+
+/* SWITCH */
+
+.mobile_toggle {
+    position: absolute;
+    top: 1.1rem;
+    right: 1rem;
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    color: rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    transition: right .4s;
+}
+
+.mobile_custom-input input.focused:valid ~ .mobile_toggle,
+.mobile_custom-input input.focused:invalid ~ .mobile_toggle {
+    right: 4rem;
+}
+
+.mobile_toggle_checked {
+    color: #0085FF;
+}
+
+/* The switch - the box around the slider */
+    .mobile_switch {
+    position: relative;
+    display: inline-block;
+    width: 3.6rem;
+    height: 1.8rem;
+  }
+  
+  /* Hide default HTML checkbox */
+  .mobile_switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .mobile_slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 133, 255, 0.8);
+    -webkit-transition: transform .4s;
+    transition: transform .4s;
+  }
+  
+  .mobile_slider:before {
+    position: absolute;
+    content: "";
+    height: 1.2rem;
+    width: 1.2rem;
+    left: 0.3rem;
+    bottom: 0.3rem;
+    background-color: white;
+    -webkit-transition: transform .4s;
+    transition: transform .4s;
+  }
+  
+  .mobile_toggle input:checked + .mobile_slider:before {
+    -webkit-transform: translateX(1.8rem);
+    -ms-transform: translateX(1.8rem);
+    transform: translateX(1.8rem);
+  }
+  
+  /* Rounded sliders */
+  .mobile_slider.mobile_round {
+    border-radius: 0.5rem;
+  }
+  
+  .mobile_slider.mobile_round:before {
+    border-radius: 0.3rem;
+  }
+
+
+
+
+.mobile_header {
+    font-family: 'SF UI Display';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    text-align: center;
+    color: #0085FF;
+}
+
+/* ------------------ MOBILE MODAL ----------------- */
+
+body.modal-open {
+    overflow: hidden;
+}
+
+.mobile_modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 10; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    min-height: 100%; /* Full height */
+    overflow: hidden;
+    background-color: rgb(255, 255, 255); /* Fallback color */
+    background: rgba(255, 255, 255, 0.75); /* White w/ opacity */
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.mobile_modal_content {
+    background: #FFFFFF;
+    box-shadow: 0px 0.2rem 1rem 0.1rem rgba(0, 0, 0, 0.15);
+    border-radius: 0.8rem;
+    padding: 2rem;
+    
+    width: 90%;
+}
+
+.mobile_modal_filter {
+    font-family: 'SF UI Display';
+    font-weight: 300;
+    font-size: 1.2rem;
+    border: none;
+    border-bottom: 0.15rem solid #BBBBBB;
+    padding: 0.4rem;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.mobile_modal_filter:focus {
+    border-color: #0085FF;
+    outline: none;
+}
+
+.mobile_modal_filter::placeholder {
+    color: #BBBBBB;
+}
+
+.mobile_alphabet_letter {
+    padding: 0.5rem 0;
+}
+
+.mobile_alphabet_letter .mobile_letter {
+    font-family: 'SF UI Display';
+    font-weight: 500;
+    font-size: 1.4rem;
+    color: #0085FF;
+}
+
+.mobile_alphabet_letter hr,
+.mobile_modal_name hr {
+    border: none;
+    border-bottom: 0.1rem solid rgba(0, 0, 0, 0.1);
+}
+
+.mobile_modal_name {
+    padding-bottom: 0.4rem;
+}
+
+.mobile_modal_name h3 {
+    font-family: 'SF UI Display';
+    font-weight: 500;
+    font-size: 1.4rem;
+    color: #0085FF;
+    padding-bottom: 0.5rem;
+}
+
+.mobile_modal_overflow {
+    max-height: 50vh;
+    overflow-y: scroll;
+}
+
+.mobile_radio_variant {
+    padding: 0.6rem 0;
+}
+
+.mobile_radio_variant label {
+    font-family: 'SF UI Display';
+    font-weight: 400;
+    font-size: 1.4rem;
+    color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.mobile_radio_variant input:checked + label {
+    color: #0085FF;
+    font-weight: bold;
+}
+
+.mobile_custom_checkbox {
+    display: block;
+    background: rgba(181, 219, 255, 0.4);
+    border-radius: 0.2rem;
+    height: 1.5rem;
+    width: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile_custom_checkbox::after {
+    content: "";
+    display: none;
+    height: 0.9rem;
+    width: 0.9rem;
+    background: rgba(0, 133, 255, 0.5);
+    border-radius: 0.2rem;
+}
+
+.mobile_radio_variant input:checked + label .mobile_custom_checkbox::after {
+    display: block;
+}
+
+.mobile_modal_buttons {
+    padding-top: 1.4rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.mobile_modal_buttons button,
+.mobile_modal_buttons input {
+    border: none;
+    background: none;
+    font-family: 'SF UI Display';
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: #0085FF;
+    width: 9rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.mobile_info {
+    font-family: 'SF UI Display';
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-align: center;
+    color: #BBBBBB;
+    width: 80%;
+    margin: 0 auto;
+}
+
+#mobile_submit {
+    border: none;
+    height: 4.15rem;
+    background: #0085FF;
+    border-radius: 0.3rem;
+    font-family: 'SF UI Display';
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    width: 100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+#mobile_scroll-info {
+    border: none;
+    padding: 0.7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    color: #FAFAFA;
+    position: sticky;
+    width: 100%;
+    bottom: 0;
+    z-index: 2;
+    font-family: 'SF UI Display';
+    font-weight: 600;
+    font-size: 1.1rem;
+    background: #0085FF;
+    opacity: 1;
+    visibility: visible;
+    transition: visibility 0s, opacity 0.5s linear;
+}
+
+#mobile_scroll-info.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+#mobile_scroll-info img {
+    height: 1rem;
+}
+
+#unbekannte {
+    font-family: 'SF UI Display';
+    font-weight: 600;
+    font-size: 1rem;
+}

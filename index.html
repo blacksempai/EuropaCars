@@ -1,0 +1,1498 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>Europa Cars</title>
+    <link rel="shortcut icon" href="assets/images/favicon.svg?v=2" type="image/x-icon">
+    <link rel="stylesheet" href="loading.css">
+    <link rel="stylesheet" href="custom-select.css">
+    <link rel="stylesheet" href="icons.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+    <div id="loading">
+        <noscript>You need to enable JavaScript to run this app.</noscript>
+        <div class="loading-spinner">
+            <div class="dot dotOne"></div>
+            <div class="dot dotTwo"></div>
+            <div class="dot dotThree"></div>
+        </div>
+    </div>
+    <div id="desktop-version" class="container">
+        <header>
+            <div class="logo">
+                <img src="assets/images/logo.svg" alt="Europa Cars">
+            </div>
+            <div class="vitals">
+                <div class="address">
+                    <a class="address_link" href="https://www.google.com/maps/place/Mykhaila+Boichuka+St,+45,+Kyiv,+02000/@50.4005819,30.5526035,17z/data=!3m1!4b1!4m5!3m4!1s0x40d4cf584223e721:0x335f8698b0c3200a!8m2!3d50.4005819!4d30.5547922">
+                        Михайла Бойчука, 45
+                    </a>
+                </div>
+                <div id="contacts" class="contacts">
+                    <a href="https://wa.me/4917682070845">
+                        <img src="assets/images/watsapp.svg" alt="watsapp">
+                    </a>
+                    <a href="http://m.me/binderautomobile1">
+                        <img src="assets/images/messenger.svg" alt="messenger">
+                    </a>
+                    <a href="skype:binderautomobile1?chat">
+                        <img src="assets/images/skype.svg" alt="skype">
+                    </a>
+                    <a href="https://telegram.me/binderautomobile1">
+                        <img src="assets/images/telegram.svg" alt="telegram">
+                    </a>
+                    <a href="tel:+4917682070845">
+                        <img src="assets/images/viber.svg" alt="viber">
+                    </a>
+                </div>
+            </div>
+        </header>
+        <main>
+            <form id="form" action="https://google.com">
+                <div class="form_grid">
+                    <fieldset class="form_field">
+                        <div class="form_field_info">
+                            <label class="label" for="marke">MARKE</label>
+                            <span class="validation_mark"></span>
+                        </div>
+                        <div class="custom_select_wrapper">
+                            <select class="select" name="marke" id="marke" required>
+                                <option value="" disabled selected hidden style="display:none;">Bitte wählen</option>
+                                <option value="Alfa Romeo">Alfa Romeo</option>
+                                <option value="ALPINA">ALPINA</option>
+                                <option value="Aston Martin">Aston Martin</option>
+                                <option value="Audi">Audi</option>
+                                <option value="Austin">Austin</option>
+                                <option value="Austin Healey">Austin Healey</option>
+                                <option value="Bentley">Bentley</option>
+                                <option value="BMW">BMW</option>
+                                <option value="Bugatti">Bugatti</option>
+                                <option value="Cadilac">Cadilac</option>
+                                <option value="Chevrolet">Chevrolet</option>
+                                <option value="Chrysler">Chrysler</option>
+                                <option value="Citroën">Citroën</option>
+                                <option value="Corvette">Corvette</option>
+                                <option value="Dacia">Dacia</option>
+                                <option value="Daewoo">Daewoo</option>
+                                <option value="Daihatsu">Daihatsu</option>
+                                <option value="Dodge">Dodge</option>
+                                <option value="Ferrari">Ferrari</option>
+                                <option value="Fiat">Fiat</option>
+                                <option value="Ford">Ford</option>
+                                <option value="GMC">GMC</option>
+                                <option value="Honda">Honda</option>
+                            </select>
+                        </div>
+                    </fieldset>
+                    <fieldset class="form_field">
+                        <div class="form_field_info">
+                            <label class="label" for="modell">MODELL</label>
+                            <span class="validation_mark"></span>
+                        </div>
+                        <div class="custom_select_wrapper">
+                            <input type="text" id="model_filter" class="search_filter" placeholder="Search">
+                            <select class="select" name="modell" id="modell" required>
+                                <option value="" disabled selected hidden style="display:none;">Bitte wählen</option>
+                                <option value="cadillac">Cadillac</option>
+                                <option value="hurr">Cadillac</option>
+                                <option value="hurr">Cadillac</option>
+                                <option value="cadillac">Cadillac</option>
+                                <option value="hurr">Cadillac</option>
+                                <option value="hurr">Cadillac</option>
+                                <option value="cadillac">Cadillac</option>
+                                <option value="hurr">Cadillac</option>
+                                <option value="hurr">Cadillac</option>
+                            </select>
+                        </div>
+                    </fieldset>
+                    <fieldset class="form_field optional_field">
+                        <div class="form_field_info">
+                            <label class="label" for="variante">VARIANTE</label>
+                            <span class="validation_mark"></span>
+                        </div>
+                        <input class="custom_input" type="text" name="variante" id="variante" placeholder="z.B. S line, AMG, GTI usw.">
+                    </fieldset>
+                    <fieldset class="form_field">
+                        <div class="form_field_info">
+                            <label class="label" for="erstzulassung">ERSTZULASSUNG</label>
+                            <span class="validation_mark"></span>
+                        </div>
+                        <input class="custom_input" type="text" name="erstzulassung" id="erstzulassung" placeholder="Bitte ausfüllen" pattern="^[1-9]+[0-9]*$" required>
+                    </fieldset>
+                    <fieldset class="form_field">
+                        <div class="form_field_info">
+                            <label class="label" for="kilometer">KILOMETER</label>
+                            <span class="validation_mark"></span>
+                        </div>
+                        <input class="custom_input" type="text" name="kilometer" id="kilometer" placeholder="Bitte ausfüllen" pattern="^[1-9]+[0-9]*$" required>
+                    </fieldset>
+                    <fieldset class="form_field">
+                        <div class="form_field_info">
+                            <label class="label" for="leistung">LEISTUNG</label>
+                            <span class="validation_mark"></span>
+                        </div>
+                        <div class="custom_input_wrapper">
+                            <input class="custom_input" type="text" name="leistung" id="leistung" placeholder="Bitte ausfüllen" pattern="^[1-9]+[0-9]*$" required>
+                            <div class="toggle">
+                                <span id="ps" class="toggle_checked">PS</span>
+                                <label class="switch" for="ps_kw">
+                                    <input name="ps_kw" id="ps_kw" type="checkbox">
+                                    <span class="slider round"></span>
+                                </label>
+                                <span id="kw">Kw</span>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="form_field fahrzeugtyp">
+                        <div class="form_field_info">
+                            <label class="label" for="fahrzeugtyp">FAHRZEUGTYP</label>
+                            <span class="validation_mark"></span>
+                        </div>
+                        <div class="custom_select_wrapper">
+                            <select class="select" name="fahrzeugtyp" id="fahrzeugtyp" required>
+                                <option value="" disabled selected hidden style="display:none;">Bitte wählen</option>
+                                <option value="kombi">Kombi</option>
+                                <option value="limousine">Limousine</option>
+                                <option value="kleinwagen">Kleinwagen</option>
+                                <option value="cabrio_roadster">Cabrio/Roadster</option>
+                                <option value="sportwagen_coupe">Sportwagen/Coupe</option>
+                                <option value="suv_gelandewagen">SUV/Gelandewagen</option>
+                                <option value="van_minibus">Van/Minibus</option>
+                                <option value="andere">Andere</option>
+                            </select>
+                        </div>
+                    </fieldset>
+                    <fieldset class="form_field" id="getriebe_form_field">
+                        <div class="form_field_info">
+                            <label class="label" for="getriebe">GETRIEBE</label>
+                            <span class="validation_mark"></span>
+                        </div>
+                        <div class="custom_select_wrapper">
+                            <select class="select" name="getriebe" id="getriebe" required>
+                                <option value="" disabled selected hidden style="display:none;">Bitte wählen</option>
+                                <option value="Schaltgetriebe">Schaltgetriebe</option>
+                                <option value="Automatik">Automatik</option>
+                                <option value="Halbautomatik">Halbautomatik</option>
+                            </select>
+                        </div>
+                    </fieldset>
+                    <fieldset class="form_field optional_field" id="modal_form_field">
+                        <div class="form_field_info">
+                            <label class="label" for="ausstattung">AUSSTATTUNG</label>
+                            <span class="validation_mark"></span>
+                        </div>
+                        <div class="custom_input_wrapper">
+                            <input class="custom_input_button" type="button" onclick="openModal()" value="Bitte wählen">
+                            <div class="custom_input_after"></div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="form_field zusatzinformation_field optional_field">
+                        <div class="form_field_info">   
+                            <label class="label" for="zusatzinformation">ZUSATZINFORMATION</label>
+                            <span class="validation_mark"></span>
+                        </div>
+                        <div class="custom_input_wrapper">
+                            <textarea id="zusatzinformation" class="custom_input" name="zusatzinformation" rows="3" placeholder="Vorhandene Schäden (z.B Beulen, Motorlampe ist an usw.) oder jede andere nützliche Information... (optional)"></textarea>
+                        </div>
+                    </fieldset>
+                    <fieldset class="form_field optional_field" id="file_form_field">
+                        <div class="form_field_info">
+                            <label class="label" for="file">DATEI ANHÄNGEN <span class="paper_clip_icon">📎</span> </label>
+                            <span class="validation_mark"></span>
+                            <label for="file" id="file_button">Wähle Dateien</label>
+                            <input type="file" name="file" id="file" multiple hidden>
+                        </div>
+                        <div class="custom_input" id="file_list_wrapper">
+                            <div id="file_list">Foto laden: scheckheft usw</div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="form_field">
+                        <div class="form_field_info">
+                            <label class="label" for="oder">ORT ODER PLZ EINGEBEN</label>
+                            <span class="validation_mark"></span>
+                        </div>
+                        <input class="custom_input" type="text" name="oder" id="oder" placeholder="z. B. Berlin oder 10243" required>
+                    </fieldset>
+                    <fieldset class="form_field optional_field">
+                        <div class="form_field_info">
+                            <label class="label" for="email">KONTAKT (E-Mail)</label>
+                            <span class="validation_mark"></span>
+                        </div>
+                        <input class="custom_input" type="email" name="email" id="email" placeholder="Bitte ausfüllen (optional)">
+                    </fieldset>
+                    <fieldset class="form_field optional_field">
+                        <div class="form_field_info">
+                            <label class="label" for="tel">KONTAKT (Telefon)</label>
+                            <span class="validation_mark"></span>
+                        </div>
+                        <input class="custom_input" type="tel" name="tel" id="tel" placeholder="Bitte ausfüllen (optional)" pattern="^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$">
+                    </fieldset>
+                    <fieldset class="form_field">
+                        <div class="form_field_info">
+                            <label class="label" for="preis">PREIS</label>
+                            <span class="validation_mark"></span>
+                        </div>
+                        <input class="custom_input" type="text" name="preis" id="preis" placeholder="Bitte ausfüllen" required>
+                    </fieldset>
+                    <fieldset class="form_field mwst">
+                        <div class="form_field_info">
+                            <label class="label" for="mwst">MWST.</label>
+                            <span class="validation_mark"></span>
+                        </div>
+                        <div class="custom_select_wrapper">
+                            <select class="select" name="mwst" id="mwst" required>
+                                <option value="" disabled selected hidden style="display:none;">Bitte wählen</option>
+                                <option value="19">MwSt. 19%</option>
+                                <option value="mwst">MwSt. nicht ausweisbar</option>
+                            </select>
+                        </div>
+                    </fieldset>
+                    <fieldset class="form_field">
+                        <div class="form_field_info">
+                            <div class="submit_white_space">&nbsp;</div>
+                        </div>
+                        <div class="custom_input_wrapper">
+                            <input class="custom_submit" type="button" id="submit_btn" value="SENDEN">
+                        </div>
+                    </fieldset>
+                </div>    
+                <div id="modal" class="modal">
+                    <div class="modal_content">
+                        <span class="close" onclick="closeModal()"><img src="assets/images/xmark.svg" alt="&times;"></span>
+                        <h2>AUSSTTATUNG</h2>
+                        <p>Sie können mehrere Optionen auswählen oder das Feld leer lassen</p>
+                        <div class="modal_content_block">
+                            <div class="column">
+                                <h3>Sportausstattung</h3>
+                                <div class="form_field">  
+                                    <label class="custom_checkbox_container" for="sportpaket">
+                                        <input class="custom_checkbox" type="checkbox" name="sportpaket" id="sportpaket">
+                                        <span class="custom_checkbox_checkmark"></span>
+                                        <span class="custom_ckeckbox_label">Sportpaket</span>
+                                    </label>
+                                </div>
+                                <div class="form_field">  
+                                    <label class="custom_checkbox_container" for="sportsitze">
+                                        <input class="custom_checkbox" type="checkbox" name="sportsitze" id="sportsitze">
+                                        <span class="custom_checkbox_checkmark"></span>
+                                        <span class="custom_ckeckbox_label">Sportsitze</span>
+                                    </label>
+                                </div>
+                                <div class="form_field">  
+                                    <label class="custom_checkbox_container" for="sportfahrwerk">
+                                        <input class="custom_checkbox" type="checkbox" name="sportfahrwerk" id="sportfahrwerk">
+                                        <span class="custom_checkbox_checkmark"></span>
+                                        <span class="custom_ckeckbox_label">Sportfahrwerk</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <h3>Innenausstattung</h3>
+                                <div class="form_field">  
+                                    <label class="custom_checkbox_container" for="leder">
+                                        <input class="custom_checkbox" type="checkbox" name="leder" id="leder">
+                                        <span class="custom_checkbox_checkmark"></span>
+                                        <span class="custom_ckeckbox_label">Leder</span>
+                                    </label>
+                                </div>
+                                <div class="form_field">  
+                                    <label class="custom_checkbox_container" for="teilleder">
+                                        <input class="custom_checkbox" type="checkbox" name="teilleder" id="teilleder">
+                                        <span class="custom_checkbox_checkmark"></span>
+                                        <span class="custom_ckeckbox_label">Teilleder</span>
+                                    </label>
+                                </div>
+                                <div class="form_field">  
+                                    <label class="custom_checkbox_container" for="alcantara">
+                                        <input class="custom_checkbox" type="checkbox" name="alcantara" id="alcantara">
+                                        <span class="custom_checkbox_checkmark"></span>
+                                        <span class="custom_ckeckbox_label">Alcantara</span>
+                                    </label>
+                                </div>
+                                <div class="form_field">  
+                                    <label class="custom_checkbox_container" for="velours">
+                                        <input class="custom_checkbox" type="checkbox" name="velours" id="velours">
+                                        <span class="custom_checkbox_checkmark"></span>
+                                        <span class="custom_ckeckbox_label">Velours</span>
+                                    </label>
+                                </div>
+                                <div class="form_field">  
+                                    <label class="custom_checkbox_container" for="stoff">
+                                        <input class="custom_checkbox" type="checkbox" name="stoff" id="stoff">
+                                        <span class="custom_checkbox_checkmark"></span>
+                                        <span class="custom_ckeckbox_label">Stoff</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <h3>Scheinwerfer</h3>
+                                <div class="form_field">  
+                                    <label class="custom_checkbox_container" for="einfache">
+                                        <input class="custom_checkbox" type="checkbox" name="einfache" id="einfache">
+                                        <span class="custom_checkbox_checkmark"></span>
+                                        <span class="custom_ckeckbox_label">Einfache</span>
+                                    </label>
+                                </div>
+                                <div class="form_field">  
+                                    <label class="custom_checkbox_container" for="xenon">
+                                        <input class="custom_checkbox" type="checkbox" name="xenon" id="xenon">
+                                        <span class="custom_checkbox_checkmark"></span>
+                                        <span class="custom_ckeckbox_label">Xenon</span>
+                                    </label>
+                                </div>
+                                <div class="form_field">  
+                                    <label class="custom_checkbox_container" for="bi_xenon">
+                                        <input class="custom_checkbox" type="checkbox" name="bi_xenon" id="bi_xenon">
+                                        <span class="custom_checkbox_checkmark"></span>
+                                        <span class="custom_ckeckbox_label">Bi-Xenon</span>
+                                    </label>
+                                </div>
+                                <div class="form_field">  
+                                    <label class="custom_checkbox_container" for="led">
+                                        <input class="custom_checkbox" type="checkbox" name="led" id="led">
+                                        <span class="custom_checkbox_checkmark"></span>
+                                        <span class="custom_ckeckbox_label">LED</span>
+                                    </label>
+                                </div>
+                                <div class="form_field">  
+                                    <label class="custom_checkbox_container" for="laserlicht">
+                                        <input class="custom_checkbox" type="checkbox" name="laserlicht" id="laserlicht">
+                                        <span class="custom_checkbox_checkmark"></span>
+                                        <span class="custom_ckeckbox_label">Laserlicht</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <h3>Einparkhilfe</h3>
+                                <div class="form_field">  
+                                    <label class="custom_checkbox_container" for="hinten">
+                                        <input class="custom_checkbox" type="checkbox" name="hinten" id="hinten">
+                                        <span class="custom_checkbox_checkmark"></span>
+                                        <span class="custom_ckeckbox_label">Hinten</span>
+                                    </label>
+                                </div>
+                                <div class="form_field">  
+                                    <label class="custom_checkbox_container" for="vorne">
+                                        <input class="custom_checkbox" type="checkbox" name="vorne" id="vorne">
+                                        <span class="custom_checkbox_checkmark"></span>
+                                        <span class="custom_ckeckbox_label">Vorne</span>
+                                    </label>
+                                </div>
+                                <div class="form_field">  
+                                    <label class="custom_checkbox_container" for="kamera">
+                                        <input class="custom_checkbox" type="checkbox" name="kamera" id="kamera">
+                                        <span class="custom_checkbox_checkmark"></span>
+                                        <span class="custom_ckeckbox_label">Kamera</span>
+                                    </label>
+                                </div>
+                                <div class="form_field">  
+                                    <label class="custom_checkbox_container" for="kamera360">
+                                        <input class="custom_checkbox" type="checkbox" name="kamera360" id="kamera360">
+                                        <span class="custom_checkbox_checkmark"></span>
+                                        <span class="custom_ckeckbox_label">360°-Kamera</span> 
+                                    </label>
+                                </div>
+                                <div class="form_field">  
+                                    <label class="custom_checkbox_container" for="selbstlenkende_systeme">
+                                        <input class="custom_checkbox" type="checkbox" name="selbstlenkende_systeme" id="selbstlenkende_systeme">
+                                        <span class="custom_checkbox_checkmark"></span>
+                                        <span>Selbstlenkende Systeme</span> 
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <h2>SONSTIGE AUSSTATUNG</h2>
+                        <div class="modal_content_block">
+                            <div class="column">
+                                <div class="form_field">  
+                                    <label class="custom_checkbox_container" for="allradantrieb">
+                                        <input class="custom_checkbox" type="checkbox" name="allradantrieb" id="allradantrieb">
+                                        <span class="custom_checkbox_checkmark"></span>
+                                        <span class="custom_ckeckbox_label">Allradantrieb</span>
+                                    </label>
+                                </div>
+                                <div class="form_field">  
+                                    <label class="custom_checkbox_container" for="head_up_display">
+                                        <input class="custom_checkbox" type="checkbox" name="head_up_display" id="head_up_display">
+                                        <span class="custom_checkbox_checkmark"></span>
+                                        <span class="custom_ckeckbox_label">Head-Up Display</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="form_field">  
+                                    <label class="custom_checkbox_container" for="navigationssystem">
+                                        <input class="custom_checkbox" type="checkbox" name="navigationssystem" id="navigationssystem">
+                                        <span class="custom_checkbox_checkmark"></span>
+                                        <span class="custom_ckeckbox_label">Navigationssystem</span>
+                                    </label>
+                                </div>
+                                <div class="form_field">  
+                                    <label class="custom_checkbox_container" for="elektr_sitzeinstellung">
+                                        <input class="custom_checkbox" type="checkbox" name="elektr_sitzeinstellung" id="elektr_sitzeinstellung">
+                                        <span class="custom_checkbox_checkmark"></span>
+                                        <span class="custom_ckeckbox_label">Elektr. Sitzeinstellung</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="form_field">  
+                                    <label class="custom_checkbox_container" for="fach_bereift_8">
+                                        <input class="custom_checkbox" type="checkbox" name="fach_bereift_8" id="fach_bereift_8">
+                                        <span class="custom_checkbox_checkmark"></span>
+                                        <span class="custom_ckeckbox_label">8 fach bereift</span>
+                                    </label>
+                                </div>
+                                <div class="form_field">  
+                                    <label class="custom_checkbox_container" for="oder7_sitzer_9">
+                                        <input class="custom_checkbox" type="checkbox" name="oder7_sitzer_9" id="oder7_sitzer_9">
+                                        <span class="custom_checkbox_checkmark"></span>
+                                        <span class="custom_ckeckbox_label">7 oder 9 Sitzer</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="form_field">  
+                                    <label class="custom_checkbox_container" for="panorama_schiebedach">
+                                        <input class="custom_checkbox" type="checkbox" name="panorama_schiebedach" id="panorama_schiebedach">
+                                        <span class="custom_checkbox_checkmark"></span>
+                                        <span class="custom_ckeckbox_label">Panorama/Schiebedach</span>
+                                    </label>
+                                </div>
+                                <div class="form_field">  
+                                    <label class="custom_checkbox_container" for="scheckheftgepflegt">
+                                        <input class="custom_checkbox" type="checkbox" name="scheckheftgepflegt" id="scheckheftgepflegt">
+                                        <span class="custom_checkbox_checkmark"></span>
+                                        <span class="custom_ckeckbox_label">Scheckheftgepflegt</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <input class="custom_submit" type="button" onclick="closeModal()" value="WEITER">
+                    </div>
+                </div>
+            </form>
+        </main>
+    </div>  
+
+<div id="mobile-version">
+    <div class="mobile_container">
+        <div class="mobile_fixed-header">
+            <div class="mobile_logo">
+                <img src="assets/images/logo.svg" alt="Europa Cars">
+            </div>
+                <div class="mobile_contacts">
+                    <a href="https://wa.me/4917682070845">
+                        <img src="assets/images/newIcons/watsapp.svg" alt="watsapp">
+                    </a>
+                    <a href="http://m.me/binderautomobile1">
+                        <img src="assets/images/newIcons/messenger.svg" alt="messenger">
+                    </a>
+                    <a href="skype:binderautomobile1?chat">
+                        <img src="assets/images/newIcons/skype.svg" alt="skype">
+                    </a>
+                    <a href="https://telegram.me/binderautomobile1">
+                        <img src="assets/images/newIcons/telegramm.svg" alt="telegram">
+                    </a>
+                    <a href="tel:+4917682070845">
+                        <img src="assets/images/newIcons/viber.svg" alt="viber">
+                    </a>
+                    <button id="mobile_reset">
+                        <img src="assets/images/newIcons/trash-solid.svg" alt="reset">
+                    </button> 
+                </div>
+        </div>
+        <form id="mobile_form" action="https://google.com">
+            <div class="mobile_modal" id="reset_modal">
+                <div class="mobile_modal_content">
+                    <p class="grey_text">
+                        Willst Du alle Suchkriterien zurücksetzen?
+                    </p>
+                    <div class="mobile_modal_buttons">
+                        <button onclick="closeResetModal(event)">Abbrechen</button>
+                        <button id="mobile_reset_btn" onclick="resetForm(event)">Zurücksetzen</button>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile_fields_container">
+
+                <button class="mobile_custom-button" id="mobile_marke_button">
+                    <p class="mobile_button-name">Marke</p>
+                    <p class="mobile_button-value" id="mobile_marke_value">Bitte wahlen</p>
+                </button>
+
+                <div id="mobile_marke_modal" class="mobile_modal">
+                    <div class="mobile_modal_content">
+                        <input id="mobile_marke_filter" class="mobile_modal_filter" type="text" placeholder="Search">
+                        <div class="mobile_modal_overflow" id="mobile_modal_marke_list">
+                            <div class="mobile_alphabet_letter">
+                                <span class="mobile_letter">A</span>
+                                <hr>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_alfa_romeo" type="radio" name="marke" value="Alfa Romeo" hidden required>
+                                <label for="mobile_alfa_romeo">Alfa Romeo</label>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_alpina" type="radio" name="marke" value="ALPINA" hidden required>
+                                <label for="mobile_alpina">ALPINA</label>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_aston_martin" type="radio" name="marke" value="Aston Martin" hidden required>
+                                <label for="mobile_aston_martin">Aston Martin</label>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_audi" type="radio" name="marke" value="Audi" hidden required>
+                                <label for="mobile_audi">Audi</label>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_austin" type="radio" name="marke" value="Austin" hidden required>
+                                <label for="mobile_austin">Austin</label>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_austin_healey" type="radio" name="marke" value="Austin Healey" hidden required>
+                                <label for="mobile_austin_healey">Austin Healey</label>
+                            </div>
+                            <div class="mobile_alphabet_letter">
+                                <span class="mobile_letter">B</span>
+                                <hr>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_bentley" type="radio" name="marke" value="Bentley" hidden required>
+                                <label for="mobile_bentley">Bentley</label>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_bmw" type="radio" name="marke" value="BMW" hidden required>
+                                <label for="mobile_bmw">BMW</label>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_bugatti" type="radio" name="marke" value="Bugatti" hidden required>
+                                <label for="mobile_bugatti">Bugatti</label>
+                            </div>
+                            <div class="mobile_alphabet_letter">
+                                <span class="mobile_letter">C</span>
+                                <hr>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_cadilac" type="radio" name="marke" value="Cadilac" hidden required>
+                                <label for="mobile_cadilac">Cadilac</label>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_chevrolet" type="radio" name="marke" value="Chevrolet" hidden required>
+                                <label for="mobile_chevrolet">Chevrolet</label>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_chrysler" type="radio" name="marke" value="Chrysler" hidden required>
+                                <label for="mobile_chrysler">Chrysler</label>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_citroen" type="radio" name="marke" value="Citroën" hidden required>
+                                <label for="mobile_citroen">Citroën</label>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_corvette" type="radio" name="marke" value="Corvette" hidden required>
+                                <label for="mobile_corvette">Corvette</label>
+                            </div>
+                            <div class="mobile_alphabet_letter">
+                                <span class="mobile_letter">D</span>
+                                <hr>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_dacia" type="radio" name="marke" value="Dacia" hidden required>
+                                <label for="mobile_dacia">Dacia</label>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_daewoo" type="radio" name="marke" value="Daewoo" hidden required>
+                                <label for="mobile_daewoo">Daewoo</label>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_daihatsu" type="radio" name="marke" value="Daihatsu" hidden required>
+                                <label for="mobile_daihatsu">Daihatsu</label>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_dodge" type="radio" name="marke" value="Dodge" hidden required>
+                                <label for="mobile_dodge">Dodge</label>
+                            </div>
+                            <div class="mobile_alphabet_letter">
+                                <span class="mobile_letter">F</span>
+                                <hr>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_ferrari" type="radio" name="marke" value="Ferrari" hidden required>
+                                <label for="mobile_ferrari">Ferrari</label>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_fiat" type="radio" name="marke" value="Fiat" hidden required>
+                                <label for="mobile_fiat">Fiat</label>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_ford" type="radio" name="marke" value="Ford" hidden required>
+                                <label for="mobile_ford">Ford</label>
+                            </div>
+                            <div class="mobile_alphabet_letter">
+                                <span class="mobile_letter">G</span>
+                                <hr>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_gmc" type="radio" name="marke" value="GMC" hidden required>
+                                <label for="mobile_gmc">GMC</label>
+                            </div>
+                            <div class="mobile_alphabet_letter">
+                                <span class="mobile_letter">H</span>
+                                <hr>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_honda" type="radio" name="marke" value="Honda" hidden required>
+                                <label for="mobile_honda">Honda</label>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_hummer" type="radio" name="marke" value="Hummer" hidden required>
+                                <label for="mobile_hummer">Hummer</label>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_hyundai" type="radio" name="marke" value="Hyundai" hidden required>
+                                <label for="mobile_hyundai">Hyundai</label>
+                            </div>
+                            <div class="mobile_alphabet_letter">
+                                <span class="mobile_letter">I</span>
+                                <hr>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_infinity" type="radio" name="marke" value="Infinity" hidden required>
+                                <label for="mobile_infinity">Infinity</label>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_isuzu" type="radio" name="marke" value="Isuzu" hidden required>
+                                <label for="mobile_isuzu">Isuzu</label>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_iveco" type="radio" name="marke" value="Iveco" hidden required>
+                                <label for="mobile_iveco">Iveco</label>
+                            </div>
+                            <div class="mobile_alphabet_letter">
+                                <span class="mobile_letter">J</span>
+                                <hr>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_jaguar" type="radio" name="marke" value="Jaguar" hidden required>
+                                <label for="mobile_jaguar">Jaguar</label>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_jeep" type="radio" name="marke" value="Jeep" hidden required>
+                                <label for="mobile_jeep">Jeep</label>
+                            </div>
+                            <div class="mobile_alphabet_letter">
+                                <span class="mobile_letter">K</span>
+                                <hr>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_kia" type="radio" name="marke" value="Kia" hidden required>
+                                <label for="mobile_kia">Kia</label>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_ktm" type="radio" name="marke" value="KTM" hidden required>
+                                <label for="mobile_ktm">KTM</label>
+                            </div>
+                            <div class="mobile_alphabet_letter">
+                                <span class="mobile_letter">L</span>
+                                <hr>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_lada" type="radio" name="marke" value="Lada" hidden required>
+                                <label for="mobile_lada">Lada</label>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_lamborghini" type="radio" name="marke" value="Lamborghini" hidden required>
+                                <label for="mobile_lamborghini">Lamborghini</label>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_lancia" type="radio" name="marke" value="Lancia" hidden required>
+                                <label for="mobile_lancia">Lancia</label>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_land_rover" type="radio" name="marke" value="Land Rover" hidden required>
+                                <label for="mobile_land_rover">Land Rover</label>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_lexus" type="radio" name="marke" value="Lexus" hidden required>
+                                <label for="mobile_lexus">Lexus</label>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_lincoln" type="radio" name="marke" value="Lincoln" hidden required>
+                                <label for="mobile_lincoln">Lincoln</label>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_lotus" type="radio" name="marke" value="Lotus" hidden required>
+                                <label for="mobile_lotus">Lotus</label>
+                            </div>
+                            <div class="mobile_alphabet_letter">
+                                <span class="mobile_letter">M</span>
+                                <hr>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_maserati" type="radio" name="marke" value="Maserati" hidden required>
+                                <label for="mobile_maserati">Maserati</label>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_maybach" type="radio" name="marke" value="Maybach" hidden required>
+                                <label for="mobile_maybach">Maybach</label>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_mazda" type="radio" name="marke" value="Mazda" hidden required>
+                                <label for="mobile_mazda">Mazda</label>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_mclaren" type="radio" name="marke" value="McLaren" hidden required>
+                                <label for="mobile_mclaren">McLaren</label>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_mercedes-benz" type="radio" name="marke" value="Mercedes-Benz" hidden required>
+                                <label for="mobile_mercedes-benz">Mercedes-Benz</label>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_MINI" type="radio" name="marke" value="MINI" hidden required>
+                                <label for="mobile_MINI">MINI</label>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_mitsubishi" type="radio" name="marke" value="Mitsubishi" hidden required>
+                                <label for="mobile_mitsubishi">Mitsubishi</label>
+                            </div>
+                            <div class="mobile_alphabet_letter">
+                                <span class="mobile_letter">N</span>
+                                <hr>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_nissan" type="radio" name="marke" value="Nissan" hidden required>
+                                <label for="mobile_nissan">Nissan</label>
+                            </div>
+                            <div class="mobile_alphabet_letter">
+                                <span class="mobile_letter">O</span>
+                                <hr>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_opel" type="radio" name="marke" value="Opel" hidden required>
+                                <label for="mobile_opel">Opel</label>
+                            </div>
+                            <div class="mobile_alphabet_letter">
+                                <span class="mobile_letter">P</span>
+                                <hr>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_peugeot" type="radio" name="marke" value="Peugeot" hidden required>
+                                <label for="mobile_peugeot">Peugeot</label>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_porsche" type="radio" name="marke" value="Porsche" hidden required>
+                                <label for="mobile_porsche">Porsche</label>
+                            </div>
+                            <div class="mobile_alphabet_letter">
+                                <span class="mobile_letter">R</span>
+                                <hr>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_rolls-royce" type="radio" name="marke" value="Rolls-Royce" hidden required>
+                                <label for="mobile_rolls-royce">Rolls-Royce</label>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_rover" type="radio" name="marke" value="Rover" hidden required>
+                                <label for="mobile_rover">Rover</label>
+                            </div>
+                            <div class="mobile_alphabet_letter">
+                                <span class="mobile_letter">S</span>
+                                <hr>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_saab" type="radio" name="marke" value="Saab" hidden required>
+                                <label for="mobile_saab">Saab</label>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_seat" type="radio" name="marke" value="Seat" hidden required>
+                                <label for="mobile_seat">Seat</label>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_skoda" type="radio" name="marke" value="Skoda" hidden required>
+                                <label for="mobile_skoda">Skoda</label>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_smart" type="radio" name="marke" value="Smart" hidden required>
+                                <label for="mobile_smart">Smart</label>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_subaru" type="radio" name="marke" value="Subaru" hidden required>
+                                <label for="mobile_subaru">Subaru</label>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_suzuki" type="radio" name="marke" value="Suzuki" hidden required>
+                                <label for="mobile_suzuki">Suzuki</label>
+                            </div>
+                            <div class="mobile_alphabet_letter">
+                                <span class="mobile_letter">T</span>
+                                <hr>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_tesla" type="radio" name="marke" value="Tesla" hidden required>
+                                <label for="mobile_tesla">Tesla</label>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_toyota" type="radio" name="marke" value="Toyota" hidden required>
+                                <label for="mobile_toyota">Toyota</label>
+                            </div>
+                            <div class="mobile_alphabet_letter">
+                                <span class="mobile_letter">V</span>
+                                <hr>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_volkswagen" type="radio" name="marke" value="Volkswagen" hidden required>
+                                <label for="mobile_volkswagen">Volkswagen</label>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_volvo" type="radio" name="marke" value="Volvo" hidden required>
+                                <label for="mobile_volvo">Volvo</label>
+                            </div>
+                        </div>
+                        <div class="mobile_modal_buttons">
+                            <button onclick="resetMarkeModal(event)">Abbrechen</button>
+                            <button onclick="closeMarkeModal(event)">Ok</button>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="mobile_custom-button" id="mobile_model_button">
+                    <p class="mobile_button-name">Modell</p>
+                    <p class="mobile_button-value" id="mobile_model_value">Bitte wahlen</p>
+                </button>
+
+                <div id="mobile_model_modal" class="mobile_modal">
+                    <div class="mobile_modal_content">
+                        <input id="mobile_model_filter" class="mobile_modal_filter" type="text" placeholder="Search">
+                        <div class="mobile_modal_overflow" id="mobile_modal_model_list">
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_f52" type="radio" name="model" value="BMW 1 Series (F52)" hidden required>
+                                <label for="mobile_f52">BMW 1 Series (F52)</label>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_X3" type="radio" name="model" value="BMW X3" hidden required>
+                                <label for="mobile_X3">BMW X3</label>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_X4" type="radio" name="model" value="BMW X4" hidden required>
+                                <label for="mobile_X4">BMW X4</label>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_X5" type="radio" name="model" value="BMW X5" hidden required>
+                                <label for="mobile_X5">BMW X5</label>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_X6" type="radio" name="model" value="BMW X6" hidden required>
+                                <label for="mobile_X6">BMW X6</label>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_2_series" type="radio" name="model" value="BMW 2 Series" hidden required>
+                                <label for="mobile_2_series">BMW 2 Series</label>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_3_series" type="radio" name="model" value="BMW 3 Series" hidden required>
+                                <label for="mobile_3_series">BMW 3 Series</label>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_4_series" type="radio" name="model" value="BMW 4 Series" hidden required>
+                                <label for="mobile_4_series">BMW 4 Series</label>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_5_series" type="radio" name="model" value="BMW 5 Series" hidden required>
+                                <label for="mobile_5_series">BMW 5 Series</label>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_6_series" type="radio" name="model" value="BMW 6 Series" hidden required>
+                                <label for="mobile_6_series">BMW 6 Series</label>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_7_series" type="radio" name="model" value="BMW 8 Series" hidden required>
+                                <label for="mobile_7_series">BMW 8 Series</label>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_8_series" type="radio" name="model" value="BMW 8 Series" hidden required>
+                                <label for="mobile_8_series">BMW 8 Series</label>
+                            </div>
+                            
+                        </div>
+                        <div class="mobile_modal_buttons">
+                            <button onclick="resetModelModal(event)">Abbrechen</button>
+                            <button onclick="closeModelModal(event)">Ok</button>
+                        </div>
+                    </div>
+                </div>
+
+                <label class="mobile_custom-input" for="mobile_variante">
+                    <input class="optional_field" type="text" id="mobile_variante" name="variante" placeholder="z.B. S line, AMG, GTI usw.">
+                    <span class="label">Variante</span>
+                    <span class="mobile_validation-mark"></span>
+                </label>
+
+                <button class="mobile_custom-button" id="mobile_fahrzeugtyp_button">
+                    <p class="mobile_button-name">Fahrzeugtyp</p>
+                    <p class="mobile_button-value" id="mobile_fahrzeugtyp_value">Bitte wahlen</p>
+                </button>
+
+                <div id="mobile_fahrzeugtyp_modal" class="mobile_modal">
+                    <div class="mobile_modal_content">
+                        <div class="mobile_modal_name">
+                            <h3>Fahrzeugtyp</h3>
+                            <hr>
+                        </div>
+                        <div id="mobile_modal_fahrzeugtyp_list">
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_kombi" type="radio" name="fahrzeugtyp" value="Kombi" hidden required>
+                                <label for="mobile_kombi">
+                                    <span class="mobile_custom_checkbox"></span>
+                                    Kombi
+                                </label>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_limousine" type="radio" name="fahrzeugtyp" value="Limousine" hidden required>
+                                <label for="mobile_limousine">
+                                    <span class="mobile_custom_checkbox"></span>
+                                    Limousine
+                                </label>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_kleinwagen" type="radio" name="fahrzeugtyp" value="Kleinwagen" hidden required>
+                                <label for="mobile_kleinwagen">
+                                    <span class="mobile_custom_checkbox"></span>
+                                    Kleinwagen
+                                </label>
+                            </div> 
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_cabrio/roadstep" type="radio" name="fahrzeugtyp" value="Cabrio/Roadstep" hidden required>
+                                <label for="mobile_cabrio/roadstep">
+                                    <span class="mobile_custom_checkbox"></span>
+                                    Cabrio/Roadstep
+                                </label>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_sportwagen/coupe" type="radio" name="fahrzeugtyp" value="Sportwagen/Coupe" hidden required>
+                                <label for="mobile_sportwagen/coupe">
+                                    <span class="mobile_custom_checkbox"></span>
+                                    Sportwagen/Coupe
+                                </label>
+                            </div> 
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_SUV/Gelandewagen" type="radio" name="fahrzeugtyp" value="SUV/Gelandewagen" hidden required>
+                                <label for="mobile_SUV/Gelandewagen">
+                                    <span class="mobile_custom_checkbox"></span>
+                                    SUV/Gelandewagen
+                                </label>
+                            </div> 
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_Van/Minibus" type="radio" name="fahrzeugtyp" value="Van/Minibus" hidden required>
+                                <label for="mobile_Van/Minibus">
+                                    <span class="mobile_custom_checkbox"></span>
+                                    Van/Minibus
+                                </label>
+                            </div> 
+                            <div class="mobile_radio_variant">
+                                
+                                <input id="mobile_Andere" type="radio" name="fahrzeugtyp" value="Andere" hidden required>
+                                <label for="mobile_Andere">
+                                    <span class="mobile_custom_checkbox"></span>
+                                    Andere
+                                </label>
+                            </div> 
+                        </div>
+                        <div class="mobile_modal_buttons">
+                            <button onclick="resetFahrzeugtypModal(event)">Abbrechen</button>
+                            <button onclick="closeFahrzeugtypModal(event)">Ok</button>
+                        </div>
+                    </div>
+                </div>
+
+                <label class="mobile_custom-input" for="mobile_erstzulassung">
+                    <input type="text" id="mobile_erstzulassung" name="erstzulassung" placeholder="Bitte ausfullen" pattern="^[1-9]+[0-9]*$" required>
+                    <span class="label">Erstzulassung</span>
+                    <span class="mobile_validation-mark"></span>
+                </label>
+
+                <label class="mobile_custom-input" for="mobile_kilometer">
+                    <input type="text" id="mobile_kilometer" name="kilometer" placeholder="Bitte ausfullen" pattern="^[1-9]+[0-9]*$" required>
+                    <span class="label">Kilometer</span>
+                    <span class="mobile_validation-mark"></span>
+                </label>
+
+                <label class="mobile_custom-input" for="mobile_leistung">
+                    <input type="text" id="mobile_leistung" name="leistung" placeholder="Bitte ausfullen" pattern="^[1-9]+[0-9]*$" required>
+                    <span class="label">Leistung</span>
+                    <span class="mobile_validation-mark"></span>
+                    <div class="mobile_toggle">
+                        <span id="mobile_ps" class="mobile_toggle_checked">PS</span>
+                        <label class="mobile_switch" for="mobile_ps_kw">
+                            <input name="ps_kw" id="mobile_ps_kw" type="checkbox">
+                            <span class="mobile_slider mobile_round"></span>
+                        </label>
+                        <span id="mobile_kw">Kw</span>
+                    </div>
+                </label>
+
+                <button class="mobile_custom-button" id="mobile_getriebe_button">
+                    <p class="mobile_button-name">Getriebe</p>
+                    <p class="mobile_button-value" id="mobile_getriebe_value">Bitte wahlen</p>
+                </button>
+
+                <div id="mobile_getriebe_modal" class="mobile_modal">
+                    <div class="mobile_modal_content">
+                        <div class="mobile_modal_name">
+                            <h3>Getriebe</h3>
+                            <hr>
+                        </div>
+                        <div id="mobile_modal_getriebe_list">
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_Schaltgetriebe" type="radio" name="getriebe" value="Schaltgetriebe" hidden required>
+                                <label for="mobile_Schaltgetriebe">
+                                    <span class="mobile_custom_checkbox"></span>
+                                    Schaltgetriebe
+                                </label>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_Halbautomatik" type="radio" name="getriebe" value="Halbautomatik" hidden required>
+                                <label for="mobile_Halbautomatik">
+                                    <span class="mobile_custom_checkbox"></span>
+                                    Halbautomatik
+                                </label>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_Automatik" type="radio" name="getriebe" value="Automatik" hidden required>
+                                <label for="mobile_Automatik">
+                                    <span class="mobile_custom_checkbox"></span>
+                                    Automatik
+                                </label>
+                            </div> 
+                        </div>
+                        <div class="mobile_modal_buttons">
+                            <button onclick="resetGetriebeModal(event)">Abbrechen</button>
+                            <button onclick="closeGetriebeModal(event)">Ok</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mobile_info">
+                    <h2 class="mobile_header">Aussttatung</h2>
+                    <p>
+                        Можете выбрать несколько вариантов или оставить поле пустым
+                    </p>
+                </div>
+
+                <div class="mobile_aussttatung_button_wrapper">
+                    <button class="mobile_custom-button mobile_ausstattung_field" id="mobile_sportausstattung_button">
+                        <p class="mobile_aussttatung_button-name">Sportausstattung</p>
+                    </button>
+                    <ul class="mobile_aussttatung_list" id="mobile_sportausstattung_list"></ul>
+                </div>
+
+                <div id="mobile_sportausstattung_modal" class="mobile_modal">
+                    <div class="mobile_modal_content">
+                        <div class="mobile_modal_name">
+                            <h3>Sportausstattung</h3>
+                            <hr>
+                            <p class="grey_text">
+                                Можете выбрать несколько вариантов или оставить поле пустым
+                            </p>
+                        </div>
+                        <div id="mobile_modal_sportausstattung_list">
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_sportpaket" type="checkbox" name="sportpaket" hidden>
+                                <label for="mobile_sportpaket">
+                                    <span class="mobile_custom_checkbox"></span>
+                                    Sportpaket
+                                </label>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_sportsitze" type="checkbox" name="sportsitze" hidden>
+                                <label for="mobile_sportsitze">
+                                    <span class="mobile_custom_checkbox"></span>
+                                    Sportsitze
+                                </label>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_sportfahrwerk" type="checkbox" name="sportfahrwerk" hidden>
+                                <label for="mobile_sportfahrwerk">
+                                    <span class="mobile_custom_checkbox"></span>
+                                    Sportfahrwerk
+                                </label>
+                            </div> 
+                        </div>
+                        <div class="mobile_modal_buttons">
+                            <button onclick="resetSportausstattungModal(event)">Abbrechen</button>
+                            <button onclick="closeSportausstattungModal(event)">Ok</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mobile_custom_button_wrapper">
+                    <button class="mobile_custom-button mobile_ausstattung_field" id="mobile_innenausstattung_button">
+                        <p class="mobile_aussttatung_button-name">Innenausstattung</p>
+                    </button>
+                    <ul class="mobile_aussttatung_list" id="mobile_innenausstattung_list"></ul>
+                </div>
+
+                <div id="mobile_innenausstattung_modal" class="mobile_modal">
+                    <div class="mobile_modal_content">
+                        <div class="mobile_modal_name">
+                            <h3>Innenausstattung</h3>
+                            <hr>
+                            <p class="grey_text">
+                                Можете выбрать несколько вариантов или оставить поле пустым
+                            </p>
+                        </div>
+                        <div id="mobile_modal_innenausstattung_list">
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_leder" type="checkbox" name="leder" hidden>
+                                <label for="mobile_leder">
+                                    <span class="mobile_custom_checkbox"></span>
+                                    Leder
+                                </label>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_teilleder" type="checkbox" name="teilleder" hidden>
+                                <label for="mobile_teilleder">
+                                    <span class="mobile_custom_checkbox"></span>
+                                    Teilleder
+                                </label>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_alcantara" type="checkbox" name="alcantara" hidden>
+                                <label for="mobile_alcantara">
+                                    <span class="mobile_custom_checkbox"></span>
+                                    Alcantara
+                                </label>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_velours" type="checkbox" name="velours" hidden>
+                                <label for="mobile_velours">
+                                    <span class="mobile_custom_checkbox"></span>
+                                    Velours
+                                </label>
+                            </div> 
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_stoff" type="checkbox" name="stoff" hidden>
+                                <label for="mobile_stoff">
+                                    <span class="mobile_custom_checkbox"></span>
+                                    Stoff
+                                </label>
+                            </div> 
+                        </div>
+                        <div class="mobile_modal_buttons">
+                            <button onclick="resetInnenausstattungModal(event)">Abbrechen</button>
+                            <button onclick="closeInnenausstattungModal(event)">Ok</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mobile_aussttatung_button_wrapper">
+                    <button class="mobile_custom-button mobile_ausstattung_field" id="mobile_scheinwerfer_button">
+                        <p class="mobile_aussttatung_button-name">Scheinwerfer</p>
+                    </button>
+                    <ul class="mobile_aussttatung_list" id="mobile_scheinwerfer_list"></ul>
+                </div>
+
+                <div id="mobile_scheinwerfer_modal" class="mobile_modal">
+                    <div class="mobile_modal_content">
+                        <div class="mobile_modal_name">
+                            <h3>Scheinwerfer</h3>
+                            <hr>
+                            <p class="grey_text">
+                                Можете выбрать несколько вариантов или оставить поле пустым
+                            </p>
+                        </div>
+                        <div id="mobile_modal_scheinwerfer_list">
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_einfache" type="checkbox" name="einfache" hidden>
+                                <label for="mobile_einfache">
+                                    <span class="mobile_custom_checkbox"></span>
+                                    Einfache
+                                </label>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_xenon" type="checkbox" name="xenon" hidden>
+                                <label for="mobile_xenon">
+                                    <span class="mobile_custom_checkbox"></span>
+                                    Xenon
+                                </label>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_bi_xenon" type="checkbox" name="bi_xenon" hidden>
+                                <label for="mobile_bi_xenon">
+                                    <span class="mobile_custom_checkbox"></span>
+                                    Bi-Xenon
+                                </label>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_led" type="checkbox" name="led" hidden>
+                                <label for="mobile_led">
+                                    <span class="mobile_custom_checkbox"></span>
+                                    LED
+                                </label>
+                            </div> 
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_laserlicht" type="checkbox" name="laserlicht" hidden>
+                                <label for="mobile_laserlicht">
+                                    <span class="mobile_custom_checkbox"></span>
+                                    Laserlicht
+                                </label>
+                            </div> 
+                        </div>
+                        <div class="mobile_modal_buttons">
+                            <button onclick="resetScheinwerferModal(event)">Abbrechen</button>
+                            <button onclick="closeScheinwerferModal(event)">Ok</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mobile_aussttatung_button_wrapper">
+                    <button class="mobile_custom-button mobile_ausstattung_field" id="mobile_einparkhilfe_button">
+                        <p class="mobile_aussttatung_button-name">Einparkhilfe</p>
+                    </button>
+                    <ul class="mobile_aussttatung_list" id="mobile_einparkhilfe_list"></ul>
+                </div>
+
+                <div id="mobile_einparkhilfe_modal" class="mobile_modal">
+                    <div class="mobile_modal_content">
+                        <div class="mobile_modal_name">
+                            <h3>Einparkhilfe</h3>
+                            <hr>
+                            <p class="grey_text">
+                                Можете выбрать несколько вариантов или оставить поле пустым
+                            </p>
+                        </div>
+                        <div id="mobile_modal_einparkhilfe_list">
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_hinten" type="checkbox" name="hinten" hidden>
+                                <label for="mobile_hinten">
+                                    <span class="mobile_custom_checkbox"></span>
+                                    Hinten
+                                </label>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_vorne" type="checkbox" name="vorne" hidden>
+                                <label for="mobile_vorne">
+                                    <span class="mobile_custom_checkbox"></span>
+                                    Vorne
+                                </label>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_kamera" type="checkbox" name="kamera" hidden>
+                                <label for="mobile_kamera">
+                                    <span class="mobile_custom_checkbox"></span>
+                                    Kamera
+                                </label>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_kamera360" type="checkbox" name="kamera360" hidden>
+                                <label for="mobile_kamera360">
+                                    <span class="mobile_custom_checkbox"></span>
+                                    360 - Kamera
+                                </label>
+                            </div> 
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_selbstlenkende_systeme" type="checkbox" name="selbstlenkende_systeme" hidden>
+                                <label for="mobile_selbstlenkende_systeme">
+                                    <span class="mobile_custom_checkbox"></span>
+                                    Selbstlenkende Systeme  
+                                </label>
+                            </div> 
+                        </div>
+                        <div class="mobile_modal_buttons">
+                            <button onclick="resetEinparkhilfeModal(event)">Abbrechen</button>
+                            <button onclick="closeEinparkhilfeModal(event)">Ok</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mobile_aussttatung_button_wrapper">
+                    <button class="mobile_custom-button mobile_ausstattung_field" id="mobile_sonstige_ausstatung_button">
+                        <p class="mobile_aussttatung_button-name">Sonstige Ausstatung</p>
+                    </button>
+                    <ul class="mobile_aussttatung_list" id="mobile_sonstige_ausstatung_list"></ul>
+                </div>
+
+                <div id="mobile_sonstige_ausstatung_modal" class="mobile_modal">
+                    <div class="mobile_modal_content">
+                        <div class="mobile_modal_name">
+                            <h3>Sonstige Ausstatung</h3>
+                            <hr>
+                            <p class="grey_text">
+                                Можете выбрать несколько вариантов или оставить поле пустым
+                            </p>
+                        </div>
+                        <div id="mobile_modal_sonstige_ausstatung_list">
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_allradantrieb" type="checkbox" name="allradantrieb" hidden>
+                                <label for="mobile_allradantrieb">
+                                    <span class="mobile_custom_checkbox"></span>
+                                    Allradantrieb
+                                </label>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_head_up_display" type="checkbox" name="head_up_display" hidden>
+                                <label for="mobile_head_up_display">
+                                    <span class="mobile_custom_checkbox"></span>
+                                    Head-Up Display
+                                </label>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_8_fach_bereift" type="checkbox" name="8_fach_bereift" hidden>
+                                <label for="mobile_8_fach_bereift">
+                                    <span class="mobile_custom_checkbox"></span>
+                                    8 fach bereift
+                                </label>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_7_oder_9_Sitzer" type="checkbox" name="7_oder_9_Sitzer" hidden>
+                                <label for="mobile_7_oder_9_Sitzer">
+                                    <span class="mobile_custom_checkbox"></span>
+                                    7 oder 9 Sitzer
+                                </label>
+                            </div> 
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_navigationssystem" type="checkbox" name="navigationssystem" hidden>
+                                <label for="mobile_navigationssystem">
+                                    <span class="mobile_custom_checkbox"></span>
+                                    Navigationssystem  
+                                </label>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_elektr_sitzeinstellung" type="checkbox" name="elektr_sitzeinstellung" hidden>
+                                <label for="mobile_elektr_sitzeinstellung">
+                                    <span class="mobile_custom_checkbox"></span>
+                                    Elektr. Sitzeinstellung 
+                                </label>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_elektr_panorama_schiebedach" type="checkbox" name="panorama_schiebedach" hidden>
+                                <label for="mobile_elektr_panorama_schiebedach">
+                                    <span class="mobile_custom_checkbox"></span>
+                                    Panorama/Schiebedach 
+                                </label>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_elektr_panorama_sheckheftgepflegt" type="checkbox" name="panorama_sheckheftgepflegt" hidden>
+                                <label for="mobile_elektr_panorama_sheckheftgepflegt">
+                                    <span class="mobile_custom_checkbox"></span>
+                                    Sheckheftgepflegt 
+                                </label>
+                            </div>
+                        </div>
+                        <div class="mobile_modal_buttons">
+                            <button onclick="resetSonstigeAusstatungModal(event)">Abbrechen</button>
+                            <button onclick="closeSonstigeAusstatungModal(event)">Ok</button>
+                        </div>
+                    </div>
+                </div>
+
+                <label class="mobile_custom-input" for="mobile_variante">
+                    <textarea id="mobile_zusatzinformation" name="zusatzinformation" rows="3" placeholder="Vorhandene Schäden (z.B Beulen, Motorlampe ist an usw.) oder jede andere nützliche Information... (optional)"></textarea>
+                    <span class="label">Zusatzinformation</span>
+                    <span class="mobile_validation-mark"></span>
+                </label>
+
+                <div class="mobile_custom-input" id="mobile_files_field">
+                    <label class="label" for="mobile_file">Datei anhangen</label>
+                    <label for="mobile_file" id="mobile_file_button"><img src="assets/images/paper-clip-svgrepo-com.svg" alt="Add File"></label>
+                    <input type="file" name="file" id="mobile_file" multiple hidden>
+                    <div id="mobile_file_list_wrapper">
+                        <div id="mobile_file_list">Foto laden: scheckheft usw</div>
+                    </div>
+                </div>
+
+                <label class="mobile_custom-input" for="mobile_preis">
+                    <input type="text" id="mobile_preis" name="preis" placeholder="Bitte ausfullen" required>
+                    <span class="label">Preis</span>
+                    <span class="mobile_validation-mark"></span>
+                </label>
+
+                <button class="mobile_custom-button" id="mobile_mwst_button">
+                    <p class="mobile_button-name">MWST.</p>
+                    <p class="mobile_button-value" id="mobile_mwst_value">Bitte wahlen</p>
+                </button>
+
+                <div id="mobile_mwst_modal" class="mobile_modal">
+                    <div class="mobile_modal_content">
+                        <div class="mobile_modal_name">
+                            <h3>MWST.</h3>
+                            <hr>
+                        </div>
+                        <div id="mobile_modal_mwst_list">
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_mwst19" type="radio" name="mwst" value="MwSt. 19%" hidden required>
+                                <label for="mobile_mwst19">
+                                    <span class="mobile_custom_checkbox"></span>
+                                    MwSt. 19%
+                                </label>
+                            </div>
+                            <div class="mobile_radio_variant">
+                                <input id="mobile_mwst_ausweisbar" type="radio" name="mwst" value="MwSt. nicht ausweisbar" hidden required>
+                                <label for="mobile_mwst_ausweisbar">
+                                    <span class="mobile_custom_checkbox"></span>
+                                    MwSt. nicht ausweisbar
+                                </label>
+                            </div>
+                        </div>
+                        <div class="mobile_modal_buttons">
+                            <button onclick="resetMwstModal(event)">Abbrechen</button>
+                            <button onclick="closeMwstModal(event)">Ok</button>
+                        </div>
+                    </div>
+                </div>
+
+                <label class="mobile_custom-input" for="mobile_oder">
+                    <input type="text" id="mobile_oder" name="oder" placeholder="z.B. Berlin oder 10243" required>
+                    <span class="label">Ort oder plz eingeben</span>
+                    <span class="mobile_validation-mark"></span>
+                </label>
+
+                <label class="mobile_custom-input" for="mobile_email">
+                    <input class="optional_field" type="email" id="mobile_email" name="email" placeholder="Bitte ausfullen (optional)">
+                    <span class="label">E-mail</span>
+                    <span class="mobile_validation-mark"></span>
+                </label>
+
+                <label class="mobile_custom-input" for="mobile_tel">
+                    <input class="optional_field" type="tel" id="mobile_tel" name="tel" placeholder="Bitte ausfullen (optional)" pattern="^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$">
+                    <span class="label">Telefon</span>
+                    <span class="mobile_validation-mark"></span>
+                </label>
+
+                <div class="mobile_info">
+                    <p>
+                        После отправки этой формы Вам на почту придет 
+                        письмо с подтверждением заказа.
+                    </p>
+                    <p>
+                        Спасибо, что выбрали Нас!
+                    </p>
+                </div>
+
+                <input id="mobile_submit" type="submit" value="SENDEN">
+
+            </div>
+        </form>
+    </div>
+    <button id="mobile_scroll-info" onclick="scrollDown()">
+        <p>Alle Filter Anzeigen</p>
+        <img src="assets/images/arrow_down.svg" alt="\/">
+    </button>
+</div>
+</body>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=dom4%2CElement.prototype.scroll%2CElement.prototype.scrollBy%2CElement.prototype.scrollIntoView%2CscrollBy%2Cscroll%2CscrollIntoView%2Cwindow.scroll%2Cwindow.scrollBy%2CscrollX%2CscrollY%2C~viewport%2C~html5-elements%2Cviewport%2CpageXOffset%2CpageYOffset%2CinnerWidth%2CinnerHeight%2Cdocument.querySelector%2Cdocument.getElementsByClassName%2CString.prototype.startsWith%2CNodeList.prototype.forEach%2CNodeList.prototype.%40%40iterator%2CArray.prototype.reduce%2CArray.prototype.forEach%2CArray.prototype.filter%2CArray.prototype.%40%40iterator"></script>
+    <script src="custom-select.min.js"></script>
+    <script src="script.js"></script>
+    <script src="modal.js"></script>
+    <script src="file.js"></script>
+    <script src="mobile.js"></script>
+    <script>
+        document.getElementById('loading').style.display = 'none';
+    </script>
+</html>

@@ -1,0 +1,17 @@
+@media only all and (max-width: 1300px) {
+    .container {
+        margin: 0 5vw;
+    }
+}
+
+@media only all and (max-width: 800px) {
+
+    #desktop-version {
+        display: none;
+    }
+
+    #mobile-version {
+        display: block;
+    }
+
+}
