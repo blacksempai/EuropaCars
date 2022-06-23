@@ -210,7 +210,7 @@
 }
 
 .mobile_ausstattung_field.filled::after {
-    transform: rotate(90deg);
+    transform: rotate(90deg) translate3d(-0.5rem, 0, 0);
 }
 
 .mobile_ausstattung_field.filled {
