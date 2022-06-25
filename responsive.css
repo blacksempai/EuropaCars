@@ -4,7 +4,7 @@
     }
 }
 
-@media only all and (max-width: 800px) {
+@media only all and (max-width: 1000px) {
 
     #desktop-version {
         display: none;
