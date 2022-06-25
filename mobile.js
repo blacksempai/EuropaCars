@@ -1,4 +1,6 @@
-window.onload = function() {
+window.onload = setViewPort;
+window.onresize = setViewPort;
+function setViewPort() {
     let viewheight = window.innerHeight;
     let viewwidth = window.innerWidth;
     let viewport = document.querySelector("meta[name=viewport]");
