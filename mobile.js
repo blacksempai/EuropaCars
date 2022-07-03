@@ -1,5 +1,4 @@
 window.onload = setViewPort;
-window.onresize = setViewPort;
 function setViewPort() {
     let viewheight = window.innerHeight;
     let viewwidth = window.innerWidth;
